@@ -92,12 +92,13 @@ if submit:
         region_vals = region_encoding[region]
 
         # Combine all into a feature array
-        features = np.array([[age, bmi, children,smoker_val,gender_val,region_vals[0],region_vals[1],region_vals[2]]])
+        features = np.array([[age, bmi, children,gender_val,smoker_val,region_vals[0],region_vals[1],region_vals[2]]])
 
         # Get prediction
         prediction = model.predict(features)
 
         # ---------- DISPLAY RESULT ----------
-        st.success(f"✅ Estimated Insurance Charges: 💵 **{prediction[0]:,.2f}**")
+        st.success(f"✅ Estimated Insurance Charges: 💵 **{round(prediction[0],2)}**")
         
+
 
