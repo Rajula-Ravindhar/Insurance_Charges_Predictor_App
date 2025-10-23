@@ -43,7 +43,7 @@ set_bg_gradient()
 
 
 # ---------- LOAD MODEL ----------
-with open(r"C:\Users\Ravindhar\jupyter works\insurance_prj\model\Insurance_charge_pred.pickle", "rb") as file:
+with open(r"Insurance_charge_pred.pickle", "rb") as file:
     model = pickle.load(file)
 
 # ---------- APP TITLE ----------
@@ -100,3 +100,4 @@ if submit:
         # ---------- DISPLAY RESULT ----------
         st.success(f"✅ Estimated Insurance Charges: 💵 **{prediction[0]:,.2f}**")
         
+
